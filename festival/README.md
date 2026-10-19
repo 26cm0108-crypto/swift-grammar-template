@@ -14,6 +14,11 @@
 ・完成したモンスターの技を選び、ほかの人が作ったモンスターと対戦できる。
 
 ## 画面
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-10-19 at 11 49 13" src="https://github.com/user-attachments/assets/bede702e-d8c3-4188-bd86-d50dd40d4df1" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-10-19 at 11 49 17" src="https://github.com/user-attachments/assets/94b3fd78-97b5-4daf-b46d-1094699e9c89" />
+
+![Uploading Simulator Screenshot - iPhone 17 Pro - 2026-10-19 at 11.49.20.png…]()
+
 
 （スクリーンショットを貼る。GitHub の編集画面に画像をドラッグ＆ドロップすると貼れます。）
 
