@@ -23,13 +23,15 @@
 （スクリーンショットを貼る。GitHub の編集画面に画像をドラッグ＆ドロップすると貼れます。）
 
 ## 使った文法・技術
+@State、@Binding,if、switch、func、ForEach、@ObservedObject、enum、switch、@StateObject、filter、randomElement、sorted
+通信class、@Published、NWBrowser、NWListener、NWConnection、Codable、JSON
 
-（例：`@State`、`List`、`ForEach`、構造体、配列の `append` と `remove`）
 
 ## 生成AIの使い方（どの場面で、どう使ったか）
 
 （例：画面の骨組みは ChatGPT に書いてもらった。削除ボタンが効かなかったので、原因を質問して直した。）
+全体の骨組みとモンスター画像はChatGPTに書いてもらった。ボタンの色やテキストなどのデザインと通信対戦などはClaudeを使った。bgmなどはGeminiを使った。
 
 ## 展示で工夫した点
-
+アプリに細かく操作説明を追加し、わかりやすくした。
 （例：文字を大きくして、来場者が操作しやすいようにした。）
