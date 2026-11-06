@@ -13,48 +13,72 @@
 ## 箇所1：（例：品名を追加するボタンの処理）
 
 ```swift
-// 該当部分のコードを抜粋して貼る（5〜15行くらい）
+private func dameKeisan(_ power: Int, _ kougeki: Int, _ bougyo: Int) -> Int {
+    let dame = Double(power)
+        * Double(kougeki + 100)
+        / Double(bougyo + 100)
+    return max(1, Int(dame))
+}
 ```
 
 **何をしているか：**
-（この部分が果たしている役割を説明する）
+ダメージの計算をしている
 
 **なぜこう書くのか：**
-（別の書き方ではなく、この書き方が選ばれている理由を説明する。分からなければ「分からない」と書いてよい）
+攻撃力や技の威力が高かったら、ダメージを高くして、防御力が高いならダメージを小さくなるようにするため
 
 **もしこう書かなかったら：**
 （この部分を消したり変えたりすると何が起きるか。実際に試した結果があればここに書く）
-
+ダメージが出せなくなる
 ---
 
 ## 箇所2：（見出し）
 
 ```swift
-// コードを貼る
+if jibunBuki && aiteBuki {
+    let jibunTateWaza = self.jibunBuki.bukiNamae == "盾"
+    let aiteTateWaza = self.aiteBuki.bukiNamae == "盾"
+
+    if jibunTateWaza != aiteTateWaza {
+        jibunFirst = jibunTateWaza
+    } else if jibun.subayasa != aite.subayasa {
+        jibunFirst = jibun.subayasa > aite.subayasa
+    } else {
+        jibunFirst = jibunSakini
+    }
+}
 ```
 
 **何をしているか：**
-
+武器の行動順を決めている
 **なぜこう書くのか：**
-
+同時に武器を使うなら素早さで行動順を決めて、盾は最初に行動できるようにするため
 **もしこう書かなかったら：**
-
+武器を使った時の行動順がおかしくなる
 ---
 
 ## 箇所3：（見出し）
 
 ```swift
-// コードを貼る
+if get(g).hp > 0, get(g).dokuTurn > 0 {
+    modify(g) {
+        $0.hp = max(0, $0.hp - 20)
+        $0.dokuTurn -= 1
+    }
+    emit("\(mei(g))は毒のダメージを受けた！",
+         damejiType: "poison")
+}
 ```
 
 **何をしているか：**
-
+毒状態なら毎ターン20ダメージ与えて、毒状態のターンを-1している
 **なぜこう書くのか：**
-
+毒状態の時にダメージを与えて、毒の残りのターンがどのくらい続くかに必要だから
 **もしこう書かなかったら：**
-
+毒のダメージを受けない
 ---
 
 ## 自分ではまだ説明できない箇所（正直に）
 
 （アプリの中で「動いているけれど何をしているか分からない」ところを書く。ここに書いたものは、後期の文法の授業で分かるようになります。）
+近くの人と通信してデータを送っているのはなんとなくわかるが、コードが全くわからない
